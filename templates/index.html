@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Roadmap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+
+            <h2>AI Career Roadmap</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <a href="{{ url_for('login') }}" class="btn">Get Started</a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>
+                Plan Smarter.<br>
+                <span>Achieve Bigger.</span>
+            </h1>
+
+            <p>
+                Get a personalized AI-powered career roadmap
+                tailored to your skills, interests and goals.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('login') }}" class="primary-btn">
+                    Get Started
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Learn More
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Career Illustration">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3>AI Powered</h3>
+
+                <p>
+                    Advanced AI creates custom roadmaps
+                    just for you.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3>Personalized</h3>
+
+                <p>
+                    From your goals to skills —
+                    fully personalized.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <h3>Step by Step</h3>
+
+                <p>
+                    Clear steps to follow and
+                    achieve your dream career.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <h3>Track Progress</h3>
+
+                <p>
+                    Track your progress and stay
+                    motivated every day.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

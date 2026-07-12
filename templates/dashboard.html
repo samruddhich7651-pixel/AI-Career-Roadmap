@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AI Career Roadmap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+           <img src="{{ url_for('static', filename='images/logo.png') }}"
+     alt="Logo"
+     width="80"
+     style="border:2px solid red;">
+
+            <h2>AI Career Roadmap</h2>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="{{ url_for('dashboard') }}">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('form') }}">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Generate Roadmap
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('logout') }}">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="dashboard-content">
+
+        <!-- Top -->
+
+        <div class="dashboard-top">
+
+            <div>
+
+                <h1>Welcome, {{ name }}</h1>
+
+                <p>Your personalized AI Career Dashboard</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="user-info">
+
+                    <img src="{{ url_for('static', filename='images/user.png') }}" alt="User">
+
+                    <span>{{ name }}</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Career Card -->
+
+        <div class="progress-card">
+
+            <h2>Current Career Goal</h2>
+
+            <h3>{{ career_goal }}</h3>
+
+        </div>
+
+
+        <!-- Roadmap -->
+
+        <div class="recent-roadmaps">
+
+            <div class="section-header">
+
+                <h2>Your Latest AI Roadmap</h2>
+
+            </div>
+
+            <div class="roadmap-content">
+
+                {{ roadmap|safe }}
+
+            </div>
+
+        </div>
+
+
+        <!-- Action Buttons -->
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('form') }}" class="primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Generate New Roadmap
+
+            </a>
+
+            <a href="{{ url_for('logout') }}" class="secondary-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+
+        <!-- Motivation -->
+
+        <div class="motivation-card">
+
+            <div class="motivation-text">
+
+                <h2>Keep Learning 🚀</h2>
+
+                <p>
+                    Stay consistent. Complete your roadmap step by step
+                    and you'll get closer to your dream career every day.
+                </p>
+
+            </div>
+
+            <img src="{{ url_for('static', filename='images/dashboard-banner.png') }}" alt="Dashboard">
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

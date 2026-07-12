@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your AI Career Roadmap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<section class="roadmap-section">
+
+    <div class="roadmap-container">
+
+        <!-- Header -->
+
+        <div class="roadmap-header">
+
+            <div>
+
+                <h1>Your AI Career Roadmap 🚀</h1>
+
+                <p>
+                    Hello <strong>{{ name }}</strong>,
+                    here is your personalized AI Career Roadmap for becoming a
+                    <strong>{{ career }}</strong>.
+                </p>
+
+            </div>
+
+            <a href="{{ url_for('dashboard') }}" class="download-btn">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+
+        <!-- User Information -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h4>Career Goal</h4>
+
+                <h3>{{ career }}</h3>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Education</h4>
+
+                <h3>{{ education }}</h3>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Skills</h4>
+
+                <p>{{ skills }}</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Daily Time</h4>
+
+                <h3>{{ time }}</h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- AI Generated Roadmap -->
+
+        <div class="recent-roadmaps">
+
+            <div class="section-header">
+
+                <h2>Your Personalized Roadmap</h2>
+
+            </div>
+
+            <div class="roadmap-content">
+
+                {{ roadmap|safe }}
+
+            </div>
+
+        </div>
+
+
+        <!-- Motivation -->
+
+        <div class="motivation-card">
+
+            <div class="motivation-text">
+
+                <h2>Believe in Yourself 🚀</h2>
+
+                <p>
+
+                    Success doesn't come overnight.
+                    Stay consistent, complete every milestone,
+                    build projects and keep learning.
+
+                </p>
+
+            </div>
+
+            <img src="{{ url_for('static', filename='images/dashboard-banner.png') }}" alt="Roadmap">
+
+        </div>
+
+
+        <!-- Action Buttons -->
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('form') }}" class="primary-btn">
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Generate Another Roadmap
+
+            </a>
+
+            <a href="{{ url_for('dashboard') }}" class="secondary-btn">
+
+                <i class="fa-solid fa-table-columns"></i>
+
+                Go to Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

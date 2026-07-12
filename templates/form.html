@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Details | AI Career Roadmap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<section class="career-section">
+
+    <div class="career-container">
+
+        <!-- Left Panel -->
+
+        <div class="career-left">
+
+            <div class="left-content">
+
+                <h1>Tell Us About Yourself</h1>
+
+                <p>
+                    Provide some details so
+                    we can create the best
+                    roadmap for you.
+                </p>
+
+                <div class="skill-icons">
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                </div>
+
+                <img src="{{ url_for('static', filename='images/form-illustration.png') }}" alt="Career Illustration">
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Panel -->
+
+        <div class="career-right">
+
+           <form action="{{ url_for('generate_roadmap_route') }}" method="POST" class="career-form">
+                <div class="input-group">
+
+                    <label>What is your name?</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>What is your dream career?</label>
+
+                    <input
+                        type="text"
+                        name="career"
+                        placeholder="e.g. Data Scientist, Web Developer"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>What are your current skills?</label>
+
+                    <input
+                        type="text"
+                        name="skills"
+                        placeholder="e.g. Python, C++, HTML"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>What are your interests?</label>
+
+                    <input
+                        type="text"
+                        name="interests"
+                        placeholder="e.g. AI, Web Development, Cyber Security"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>What is your education level?</label>
+
+                    <select name="education" required>
+
+                        <option value="">Select your education</option>
+
+                        <option>High School</option>
+
+                        <option>Diploma</option>
+
+                        <option>Undergraduate</option>
+
+                        <option>Postgraduate</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>How much time can you dedicate daily?</label>
+
+                    <select name="time" required>
+
+                        <option value="">Select time</option>
+
+                        <option>30 Minutes</option>
+
+                        <option>1 Hour</option>
+
+                        <option>2 Hours</option>
+
+                        <option>3+ Hours</option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="generate-btn">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Generate Roadmap
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

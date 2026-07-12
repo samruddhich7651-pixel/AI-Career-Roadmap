@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | AI Career Roadmap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<section class="auth-section">
+
+    <div class="auth-container">
+
+        <!-- Left Side -->
+
+        <div class="auth-left">
+
+            <div class="left-content">
+
+                <h1>Create Your Account</h1>
+
+                <p>
+                    Start your journey towards
+                    a better future.
+                </p>
+
+                <img src="{{ url_for('static', filename='images/signup-illustration.png') }}" alt="Signup Illustration">
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+
+        <div class="auth-right">
+
+            <form action="{{ url_for('register') }}" method="POST" class="auth-form">
+
+                <h2>Sign Up</h2>
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group password-box">
+
+                    <label>Password</label>
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <i class="fa-regular fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group password-box">
+
+                    <label>Confirm Password</label>
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            name="confirm_password"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <i class="fa-regular fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="auth-btn">
+                    Sign Up
+                </button>
+
+
+                <p class="auth-link">
+
+                    Already have an account?
+
+                    <a href="{{ url_for('login') }}">
+                        Login
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+
+    <div class="security-bar">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <span>
+            Your data is safe and secure with us.
+        </span>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
