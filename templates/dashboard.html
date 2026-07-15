@@ -21,10 +21,10 @@
 
         <div class="sidebar-logo">
 
-           <img src="{{ url_for('static', filename='images/logo.png') }}"
-     alt="Logo"
-     width="80"
-     style="border:2px solid red;">
+            <img src="{{ url_for('static', filename='images/logo.png') }}"
+                 alt="Logo"
+                 width="80"
+                 style="border:2px solid red;">
 
             <h2>AI Career Roadmap</h2>
 
@@ -57,7 +57,6 @@
 
     </aside>
 
-
     <!-- ================= MAIN CONTENT ================= -->
 
     <main class="dashboard-content">
@@ -78,7 +77,13 @@
 
                 <div class="user-info">
 
-                    <img src="{{ url_for('static', filename='images/user.png') }}" alt="User">
+                    {% if gender == "male" %}
+                        <img src="{{ url_for('static', filename='images/male.png') }}" alt="Male">
+                    {% elif gender == "female" %}
+                        <img src="{{ url_for('static', filename='images/female.png') }}" alt="Female">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/neutral.png') }}" alt="User">
+                    {% endif %}
 
                     <span>{{ name }}</span>
 
@@ -87,7 +92,6 @@
             </div>
 
         </div>
-
 
         <!-- Career Card -->
 
@@ -98,7 +102,6 @@
             <h3>{{ career_goal }}</h3>
 
         </div>
-
 
         <!-- Roadmap -->
 
@@ -117,9 +120,7 @@
             </div>
 
         </div>
-
-
-        <!-- Action Buttons -->
+                <!-- Action Buttons -->
 
         <div class="hero-buttons">
 

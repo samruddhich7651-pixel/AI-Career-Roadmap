@@ -67,116 +67,129 @@
         <div class="career-right">
 
            <form action="{{ url_for('generate_roadmap_route') }}" method="POST" class="career-form">
-                <div class="input-group">
 
-                    <label>What is your name?</label>
+    <div class="input-group">
 
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                    >
+        <label>What is your name?</label>
 
-                </div>
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
 
+    </div>
 
-                <div class="input-group">
+    <!-- NEW: Gender Field -->
+    <div class="input-group">
 
-                    <label>What is your dream career?</label>
+        <label>Select your gender</label>
 
-                    <input
-                        type="text"
-                        name="career"
-                        placeholder="e.g. Data Scientist, Web Developer"
-                        required
-                    >
+        <select name="gender" required>
 
-                </div>
+            <option value="">Select gender</option>
 
+            <option value="male">Male</option>
 
-                <div class="input-group">
+            <option value="female">Female</option>
 
-                    <label>What are your current skills?</label>
+            <option value="neutral">Prefer not to say</option>
 
-                    <input
-                        type="text"
-                        name="skills"
-                        placeholder="e.g. Python, C++, HTML"
-                        required
-                    >
+        </select>
 
-                </div>
+    </div>
 
+    <div class="input-group">
 
-                <div class="input-group">
+        <label>What is your dream career?</label>
 
-                    <label>What are your interests?</label>
+        <input
+            type="text"
+            name="career"
+            placeholder="e.g. Data Scientist, Web Developer"
+            required
+        >
 
-                    <input
-                        type="text"
-                        name="interests"
-                        placeholder="e.g. AI, Web Development, Cyber Security"
-                        required
-                    >
+    </div>
 
-                </div>
+    <div class="input-group">
 
+        <label>What are your current skills?</label>
 
-                <div class="input-group">
+        <input
+            type="text"
+            name="skills"
+            placeholder="e.g. Python, C++, HTML"
+            required
+        >
 
-                    <label>What is your education level?</label>
+    </div>
 
-                    <select name="education" required>
+    <div class="input-group">
 
-                        <option value="">Select your education</option>
+        <label>What are your interests?</label>
 
-                        <option>High School</option>
+        <input
+            type="text"
+            name="interests"
+            placeholder="e.g. AI, Web Development, Cyber Security"
+            required
+        >
 
-                        <option>Diploma</option>
+    </div>
 
-                        <option>Undergraduate</option>
+    <div class="input-group">
 
-                        <option>Postgraduate</option>
+        <label>What is your education level?</label>
 
-                        <option>Other</option>
+        <select name="education" required>
 
-                    </select>
+            <option value="">Select your education</option>
 
-                </div>
+            <option>High School</option>
 
+            <option>Diploma</option>
 
-                <div class="input-group">
+            <option>Undergraduate</option>
 
-                    <label>How much time can you dedicate daily?</label>
+            <option>Postgraduate</option>
 
-                    <select name="time" required>
+            <option>Other</option>
 
-                        <option value="">Select time</option>
+        </select>
 
-                        <option>30 Minutes</option>
+    </div>
 
-                        <option>1 Hour</option>
+    <div class="input-group">
 
-                        <option>2 Hours</option>
+        <label>How much time can you dedicate daily?</label>
 
-                        <option>3+ Hours</option>
+        <select name="time" required>
 
-                    </select>
+            <option value="">Select time</option>
 
-                </div>
+            <option>30 Minutes</option>
 
+            <option>1 Hour</option>
 
-                <button type="submit" class="generate-btn">
+            <option>2 Hours</option>
 
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <option>3+ Hours</option>
 
-                    Generate Roadmap
+        </select>
 
-                </button>
+    </div>
 
-            </form>
+    <button type="submit" class="generate-btn">
 
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        Generate Roadmap
+
+    </button>
+
+</form>
         </div>
 
     </div>

@@ -24,7 +24,6 @@ def register():
 
     if request.method == "POST":
 
-        # Matches register.html
         name = request.form["fullname"]
         email = request.form["email"]
         password = request.form["password"]
@@ -89,11 +88,14 @@ def generate_roadmap_route():
         return redirect(url_for("login"))
 
     name = request.form["name"]
+    gender = request.form["gender"]      # NEW
     career = request.form["career"]
     skills = request.form["skills"]
     interests = request.form["interests"]
     education = request.form["education"]
     time = request.form["time"]
+
+    session["gender"] = gender           # NEW
 
     roadmap = generate_roadmap(
         name,
@@ -112,6 +114,7 @@ def generate_roadmap_route():
     return render_template(
         "roadmap.html",
         name=name,
+        gender=gender,                   # NEW
         career=career,
         education=education,
         skills=skills,
@@ -143,6 +146,7 @@ def dashboard():
     return render_template(
         "dashboard.html",
         name=session["name"],
+        gender=session.get("gender", "neutral"),   # NEW
         career_goal=career_goal,
         roadmap=roadmap
     )
